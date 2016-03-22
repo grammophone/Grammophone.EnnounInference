@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A37C026-9496-427B-87CC-B59E7A9D92E2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gramma.Inference</RootNamespace>
+    <AssemblyName>Gramma.Inference</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Gramma.Inference.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Gramma.Inference.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassifierValidation.cs" />
+    <Compile Include="Extensions\TaskExtensions.cs" />
+    <Compile Include="Fit.cs" />
+    <Compile Include="Configuration\InferenceEnvironment.cs" />
+    <Compile Include="Configuration\Setup.cs" />
+    <Compile Include="Configuration\SetupException.cs" />
+    <Compile Include="InferenceException.cs" />
+    <Compile Include="InferenceResource.cs" />
+    <Compile Include="InferenceResourceItem.cs" />
+    <Compile Include="InferenceResourceProvider.cs" />
+    <Compile Include="InferenceResourceProviders.cs" />
+    <Compile Include="InferenceResources.cs" />
+    <Compile Include="InferenceResourceSerializationSurrogate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sentences\ExpandedLanguageFeatureFunctionsProvider.cs" />
+    <Compile Include="Sentences\ExpandedLanguageFeatureFunctionsProviderFactory.cs" />
+    <Compile Include="Sentences\LanguageCRF.cs" />
+    <Compile Include="Sentences\LanguageFeatureFunctionsProvider.cs" />
+    <Compile Include="Sentences\LanguageFeatureFunctionsProviderFactory.cs" />
+    <Compile Include="Sentences\LemmaInference.cs" />
+    <Compile Include="Sentences\SentenceClassifier.cs" />
+    <Compile Include="Sentences\SentenceClassifierTrainingOptions.cs" />
+    <Compile Include="Sentences\SentenceClassifierTrainingMethod.cs" />
+    <Compile Include="Sentences\SentenceInference.cs" />
+    <Compile Include="Sentences\TaggedSentenceTrainer.cs" />
+    <Compile Include="Sentences\WordScoringPolicy.cs" />
+    <Compile Include="Words\DictionaryAppendingOption.cs" />
+    <Compile Include="Words\DistanceFalloffFunction.cs" />
+    <Compile Include="Words\ExponentialFalloffFunction.cs" />
+    <Compile Include="Words\ReciprocalFalloffFunction.cs" />
+    <Compile Include="Words\Score.cs" />
+    <Compile Include="Words\ScoreBank.cs" />
+    <Compile Include="Words\TaggedWordFormTrainer.cs" />
+    <Compile Include="Words\TaggedWordFormTrainingSample.cs" />
+    <Compile Include="Words\WordClassifier.cs" />
+    <Compile Include="Words\WordClassifierBank.cs" />
+    <Compile Include="Words\WordClassifierTrainingOptions.cs" />
+    <Compile Include="Words\WordFeature.cs" />
+    <Compile Include="Words\WordFormsDictionary.cs" />
+    <Compile Include="Words\WordFormsDictionaryBuilder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gramma.Caching\Gramma.Caching.csproj">
+      <Project>{2C834C5B-AA21-43FA-826E-398AB4DE25AC}</Project>
+      <Name>Gramma.Caching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gramma.Configuration\Gramma.Configuration.csproj">
+      <Project>{0f7811fd-6162-4813-9c55-6c43e67308b0}</Project>
+      <Name>Gramma.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gramma.CRF\Gramma.CRF.csproj">
+      <Project>{4959C391-BEA5-4DC4-AE66-4A14D044E2B6}</Project>
+      <Name>Gramma.CRF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gramma.GenericContentModel\Gramma.GenericContentModel.csproj">
+      <Project>{79D2D4C7-C8DE-4F11-93ED-AA4E4D2FC974}</Project>
+      <Name>Gramma.GenericContentModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gramma.Indexing\Gramma.Indexing.csproj">
+      <Project>{937A024F-5DC5-4CA6-864E-BF5D9CB2E039}</Project>
+      <Name>Gramma.Indexing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gramma.Kernels\Gramma.Kernels.csproj">
+      <Project>{D025D18B-E77C-454C-9D1A-0F6B22A51273}</Project>
+      <Name>Gramma.Kernels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gramma.LanguageModel\Gramma.LanguageModel.csproj">
+      <Project>{5461B4B2-0832-42D5-AE04-6B2A7D4BF4DC}</Project>
+      <Name>Gramma.LanguageModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gramma.Linq\Gramma.Linq.csproj">
+      <Project>{E5B5F560-5224-49CC-B807-D13CE452D63B}</Project>
+      <Name>Gramma.Linq</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gramma.Optimization\Gramma.Optimization.csproj">
+      <Project>{A86E4DEA-C3E5-44F9-8975-B15E21F0E03A}</Project>
+      <Name>Gramma.Optimization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gramma.Parallel\Gramma.Parallel.csproj">
+      <Project>{7A32CFF6-1268-4CFB-BEE4-3F94DCC83028}</Project>
+      <Name>Gramma.Parallel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gramma.Serialization\Gramma.Serialization.csproj">
+      <Project>{B0E855CB-8A43-4623-8184-31CD4B4EBB57}</Project>
+      <Name>Gramma.Serialization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gramma.SVM\Gramma.SVM.csproj">
+      <Project>{96703F3E-23D2-4A59-B521-CD69C34B8DD0}</Project>
+      <Name>Gramma.SVM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gramma.Vectors\Gramma.Vectors.csproj">
+      <Project>{039DA284-52B0-4E55-917E-92F0CD3C5AD9}</Project>
+      <Name>Gramma.Vectors</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Configuration\Setup.cd" />
+    <None Include="InferenceResourceProvider.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
