@@ -165,14 +165,17 @@ namespace Gramma.Inference.Configuration
 		/// replacing preexisting item if it exists for the same <see cref="LanguageProvider"/>.
 		/// </summary>
 		/// <param name="languageProvider">The <see cref="LanguageProvider"/> to be associated with the loaded <see cref="InferenceResource"/>.</param>
-		/// <param name="filename">The filename of the <see cref="InferenceResource"/> saved data.</param>
+		/// <param name="filename">
+		/// The filename of the <see cref="InferenceResource"/> saved data,
+		/// optionally qualified to use a configured <see cref="DataStreaming.IStreamer"/>.
+		/// </param>
 		/// <returns>Returns the <see cref="InferenceResource"/> loaded.</returns>
 		public static InferenceResource LoadInferenceResource(LanguageProvider languageProvider, string filename)
 		{
 			if (languageProvider == null) throw new ArgumentNullException("languageProvider");
 			if (filename == null) throw new ArgumentNullException("filename");
 
-			using (var stream = new FileStream(filename, FileMode.Open, FileAccess.Read))
+			using (var stream = DataStreaming.Configuration.StreamingEnvironment.OpenReadStream(filename))
 			{
 				return LoadInferenceResource(languageProvider, stream);
 			}

@@ -102,6 +102,10 @@
       <Project>{4959C391-BEA5-4DC4-AE66-4A14D044E2B6}</Project>
       <Name>Gramma.CRF</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Gramma.DataStreaming\Gramma.DataStreaming.csproj">
+      <Project>{9841e0b6-915b-4ec6-b2ec-43a83e112c91}</Project>
+      <Name>Gramma.DataStreaming</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Gramma.GenericContentModel\Gramma.GenericContentModel.csproj">
       <Project>{79D2D4C7-C8DE-4F11-93ED-AA4E4D2FC974}</Project>
       <Name>Gramma.GenericContentModel</Name>

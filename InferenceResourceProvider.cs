@@ -39,7 +39,8 @@ namespace Gramma.Inference
 
 		/// <summary>
 		/// The path of the binary file containing the <see cref="InferenceResource"/>
-		/// instance which would be deserialized during <see cref="Load"/>.
+		/// instance which would be deserialized during <see cref="Load"/>,
+		/// optionally qualified to use a configured <see cref="DataStreaming.IStreamer"/>.
 		/// </summary>
 		public string Path
 		{
@@ -78,7 +79,7 @@ namespace Gramma.Inference
 
 			var formatter = InferenceResource.GetFormatter(languageProvider);
 
-			using (var stream = new FileStream(this.Path, FileMode.Open, FileAccess.Read))
+			using (var stream = DataStreaming.Configuration.StreamingEnvironment.OpenReadStream(this.Path))
 			{
 				var inferenceResource = (InferenceResource)formatter.Deserialize(stream);
 
@@ -88,7 +89,6 @@ namespace Gramma.Inference
 
 				return inferenceResource;
 			}
-
 		}
 
 		#endregion

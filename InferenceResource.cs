@@ -483,7 +483,6 @@ namespace Gramma.Inference
 		{
 			if (languageProvider == null) throw new ArgumentNullException("languageProvider");
 
-//			var formatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
 			var formatter = new Gramma.Serialization.FastBinaryFormatter();
 
 			var surrogateSelector = new SurrogateSelector();
@@ -536,11 +535,15 @@ namespace Gramma.Inference
 		/// <summary>
 		/// Save all the inference resource and all its contents to a filename.
 		/// </summary>
+		/// <param name="filename">
+		/// The name of the saved file,
+		/// optionally qualified to use a configured <see cref="DataStreaming.IStreamer"/>.
+		/// </param>
 		public void Save(String filename)
 		{
 			if (filename == null) throw new ArgumentNullException("filename");
 
-			using (var stream = new FileStream(filename, FileMode.Create, FileAccess.Write))
+			using (var stream = DataStreaming.Configuration.StreamingEnvironment.OpenWriteStream(filename))
 			{
 				Save(stream);
 			}
@@ -562,11 +565,15 @@ namespace Gramma.Inference
 		/// <summary>
 		/// Load the <see cref="InferenceResource.WordClassifierBank"/> property from a file.
 		/// </summary>
+		/// <param name="filename">
+		/// The name of the file,
+		/// optionally qualified to use a configured <see cref="DataStreaming.IStreamer"/>.
+		/// </param>
 		public void LoadWordClassifierBank(string filename)
 		{
 			if (filename == null) throw new ArgumentNullException("filename");
 
-			using (var stream = new FileStream(filename, FileMode.Open, FileAccess.Read))
+			using (var stream = DataStreaming.Configuration.StreamingEnvironment.OpenReadStream(filename))
 			{
 				LoadWordClassifierBank(stream);
 			}
@@ -587,11 +594,15 @@ namespace Gramma.Inference
 		/// <summary>
 		/// Save the <see cref="InferenceResource.WordClassifierBank"/> property to a file.
 		/// </summary>
+		/// <param name="filename">
+		/// The name of the file,
+		/// optionally qualified to use a configured <see cref="DataStreaming.IStreamer"/>.
+		/// </param>
 		public void SaveWordClassifierBank(string filename)
 		{
 			if (filename == null) throw new ArgumentNullException("filename");
 
-			using (var stream = new FileStream(filename, FileMode.Create, FileAccess.Write))
+			using (var stream = DataStreaming.Configuration.StreamingEnvironment.OpenWriteStream(filename))
 			{
 				SaveWordClassifierBank(stream);
 			}
@@ -613,11 +624,15 @@ namespace Gramma.Inference
 		/// <summary>
 		/// Load the <see cref="InferenceResource.WordFormsDictionary"/> property from a file.
 		/// </summary>
+		/// <param name="filename">
+		/// The name of the file,
+		/// optionally qualified to use a configured <see cref="DataStreaming.IStreamer"/>.
+		/// </param>
 		public void LoadWordFormsDictionary(string filename)
 		{
 			if (filename == null) throw new ArgumentNullException("filename");
 
-			using (var stream = new FileStream(filename, FileMode.Open, FileAccess.Read))
+			using (var stream = DataStreaming.Configuration.StreamingEnvironment.OpenReadStream(filename))
 			{
 				LoadWordFormsDictionary(stream);
 			}
@@ -638,11 +653,15 @@ namespace Gramma.Inference
 		/// <summary>
 		/// Save the <see cref="InferenceResource.WordFormsDictionary"/> property to a file.
 		/// </summary>
+		/// <param name="filename">
+		/// The name of the file,
+		/// optionally qualified to use a configured <see cref="DataStreaming.IStreamer"/>.
+		/// </param>
 		public void SaveWordFormsDictionary(string filename)
 		{
 			if (filename == null) throw new ArgumentNullException("filename");
 
-			using (var stream = new FileStream(filename, FileMode.Create, FileAccess.Write))
+			using (var stream = DataStreaming.Configuration.StreamingEnvironment.OpenWriteStream(filename))
 			{
 				SaveWordFormsDictionary(stream);
 			}
@@ -671,11 +690,15 @@ namespace Gramma.Inference
 		/// <summary>
 		/// Load the <see cref="InferenceResource.SentenceClassifier"/> property from a file.
 		/// </summary>
+		/// <param name="filename">
+		/// The name of the file,
+		/// optionally qualified to use a configured <see cref="DataStreaming.IStreamer"/>.
+		/// </param>
 		public void LoadSentenceClassifier(string filename)
 		{
 			if (filename == null) throw new ArgumentNullException("filename");
 
-			using (var stream = new FileStream(filename, FileMode.Open, FileAccess.Read))
+			using (var stream = DataStreaming.Configuration.StreamingEnvironment.OpenReadStream(filename))
 			{
 				LoadSentenceClassifier(stream);
 			}
@@ -696,11 +719,15 @@ namespace Gramma.Inference
 		/// <summary>
 		/// Save the <see cref="InferenceResource.SentenceClassifier"/> property to a file.
 		/// </summary>
+		/// <param name="filename">
+		/// The name of the file,
+		/// optionally qualified to use a configured <see cref="DataStreaming.IStreamer"/>.
+		/// </param>
 		public void SaveSentenceClassifier(string filename)
 		{
 			if (filename == null) throw new ArgumentNullException("filename");
 
-			using (var stream = new FileStream(filename, FileMode.Create, FileAccess.Write))
+			using (var stream = DataStreaming.Configuration.StreamingEnvironment.OpenWriteStream(filename))
 			{
 				SaveSentenceClassifier(stream);
 			}
