@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Gramma.Inference.Words
+namespace Grammophone.EnnounInference.Words
 {
 	/// <summary>
 	/// Options for training <see cref="WordClassifier"/>s.

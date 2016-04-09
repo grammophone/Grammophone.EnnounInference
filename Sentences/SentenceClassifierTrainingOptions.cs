@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Gramma.Optimization;
-using Gramma.Optimization.QuasiNewton;
-using Gramma.CRF;
-using Gramma.LanguageModel.Grammar;
+using Grammophone.Optimization;
+using Grammophone.Optimization.QuasiNewton;
+using Grammophone.CRF;
+using Grammophone.LanguageModel.Grammar;
 
-namespace Gramma.Inference.Sentences
+namespace Grammophone.EnnounInference.Sentences
 {
 	/// <summary>
 	/// Training options for a <see cref="SentenceClassifier"/>.

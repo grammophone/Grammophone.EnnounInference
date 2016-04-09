@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Runtime.Serialization;
 using System.IO;
-using Gramma.LanguageModel;
-using Gramma.LanguageModel.Grammar;
-using Gramma.LanguageModel.Provision;
-using Gramma.Inference.Configuration;
+using Grammophone.LanguageModel;
+using Grammophone.LanguageModel.Grammar;
+using Grammophone.LanguageModel.Provision;
+using Grammophone.EnnounInference.Configuration;
 using System.Diagnostics;
 
-namespace Gramma.Inference
+namespace Grammophone.EnnounInference
 {
 	/// <summary>
 	/// Declaration and loading of <see cref="InferenceResource"/>.

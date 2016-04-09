@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Gramma.GenericContentModel;
-using Gramma.LanguageModel.Provision.EditCommands;
-using Gramma.LanguageModel.Grammar;
-using Gramma.LanguageModel;
+using Grammophone.GenericContentModel;
+using Grammophone.LanguageModel.Provision.EditCommands;
+using Grammophone.LanguageModel.Grammar;
+using Grammophone.LanguageModel;
 
-namespace Gramma.Inference.Words
+namespace Grammophone.EnnounInference.Words
 {
 	/// <summary>
 	/// Set of scores for a word against various 

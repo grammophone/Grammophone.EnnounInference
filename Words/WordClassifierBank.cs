@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Gramma.GenericContentModel;
-using Gramma.Inference.Configuration;
-using Gramma.LanguageModel;
-using Gramma.LanguageModel.Grammar;
-using Gramma.LanguageModel.Provision.EditCommands;
+using Grammophone.GenericContentModel;
+using Grammophone.EnnounInference.Configuration;
+using Grammophone.LanguageModel;
+using Grammophone.LanguageModel.Grammar;
+using Grammophone.LanguageModel.Provision.EditCommands;
 using System.Runtime.Serialization;
 using System.Diagnostics;
 using System.Threading;
-using Gramma.LanguageModel.TrainingSources;
+using Grammophone.LanguageModel.TrainingSources;
 
-namespace Gramma.Inference.Words
+namespace Grammophone.EnnounInference.Words
 {
 	/// <summary>
 	/// A collection of classifiers for various classes of type <see cref="CommandSequenceClass"/>,

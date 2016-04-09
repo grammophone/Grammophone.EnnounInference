@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Gramma.LanguageModel;
-using Gramma.LanguageModel.Provision;
-using Gramma.LanguageModel.TrainingSources;
+using Grammophone.LanguageModel;
+using Grammophone.LanguageModel.Provision;
+using Grammophone.LanguageModel.TrainingSources;
 
-namespace Gramma.Inference.Configuration
+namespace Grammophone.EnnounInference.Configuration
 {
 	/// <summary>
 	/// Intended to be the root of the XAML configuration.
 	/// </summary>
-	public class Setup : Gramma.Configuration.IXamlLoadListener
+	public class Setup : Grammophone.Configuration.IXamlLoadListener
 	{
 		#region Construction
 
@@ -54,7 +54,7 @@ namespace Gramma.Inference.Configuration
 
 		#region IXamlLoadListener implementation
 
-		void Gramma.Configuration.IXamlLoadListener.OnPostLoad(object sender)
+		void Grammophone.Configuration.IXamlLoadListener.OnPostLoad(object sender)
 		{
 			foreach (var trainingSet in this.TrainingSets)
 			{

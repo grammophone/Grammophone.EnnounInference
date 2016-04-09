@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Gramma.CRF;
-using Gramma.Vectors;
-using Gramma.LanguageModel.Grammar;
+using Grammophone.CRF;
+using Grammophone.Vectors;
+using Grammophone.LanguageModel.Grammar;
 
-namespace Gramma.Inference.Sentences
+namespace Grammophone.EnnounInference.Sentences
 {
 	/// <summary>
 	/// A faster and less heap-intensive feature functions provider that only

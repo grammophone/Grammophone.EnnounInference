@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Gramma.LanguageModel;
-using Gramma.LanguageModel.Provision.EditCommands;
-using Gramma.Kernels;
-using Gramma.SVM;
-using Gramma.GenericContentModel;
-using Gramma.LanguageModel.Grammar;
+using Grammophone.LanguageModel;
+using Grammophone.LanguageModel.Provision.EditCommands;
+using Grammophone.Kernels;
+using Grammophone.SVM;
+using Grammophone.GenericContentModel;
+using Grammophone.LanguageModel.Grammar;
 
-namespace Gramma.Inference.Words
+namespace Grammophone.EnnounInference.Words
 {
 	/// <summary>
 	/// A binary classifier for recognizing a <see cref="WordFeature"/> of a word.
@@ -186,7 +186,7 @@ namespace Gramma.Inference.Words
 
 			if (trainingOptions.IsGaussified) kernel = new GaussianKernel<string[]>(trainingOptions.GaussianDeviation, kernel);
 
-			var classifier = new Gramma.SVM.CoordinateDescent.SerialCoordinateDescentBinaryClassifier<string[]>(kernel);
+			var classifier = new Grammophone.SVM.CoordinateDescent.SerialCoordinateDescentBinaryClassifier<string[]>(kernel);
 
 			var clazz = this.Feature.Class;
 

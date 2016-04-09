@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Diagnostics;
 
-using Gramma.LanguageModel.Provision;
-using Gramma.LanguageModel.TrainingSources;
-using Gramma.Inference.Configuration;
-using Gramma.LanguageModel.Grammar;
-using Gramma.Linq;
-using Gramma.CRF;
+using Grammophone.LanguageModel.Provision;
+using Grammophone.LanguageModel.TrainingSources;
+using Grammophone.EnnounInference.Configuration;
+using Grammophone.LanguageModel.Grammar;
+using Grammophone.Linq;
+using Grammophone.CRF;
 
-namespace Gramma.Inference.Sentences
+namespace Grammophone.EnnounInference.Sentences
 {
 	/// <summary>
 	/// Provides training services for tagged sentences.

@@ -4,14 +4,14 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using Gramma.GenericContentModel;
-using Gramma.Inference.Configuration;
-using Gramma.LanguageModel.Grammar;
-using Gramma.LanguageModel.TrainingSources;
-using Gramma.Linq;
-using Gramma.Vectors;
+using Grammophone.GenericContentModel;
+using Grammophone.EnnounInference.Configuration;
+using Grammophone.LanguageModel.Grammar;
+using Grammophone.LanguageModel.TrainingSources;
+using Grammophone.Linq;
+using Grammophone.Vectors;
 
-namespace Gramma.Inference.Sentences
+namespace Grammophone.EnnounInference.Sentences
 {
 	/// <summary>
 	/// Classifier for sentences, yielding the part-of-speech of the words and 

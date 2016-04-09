@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Gramma.Inference
+namespace Grammophone.EnnounInference
 {
 	/// <summary>
 	/// Information about a classifier and its validation performance.

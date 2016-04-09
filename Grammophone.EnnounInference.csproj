@@ -8,8 +8,8 @@
     <ProjectGuid>{9A37C026-9496-427B-87CC-B59E7A9D92E2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Gramma.Inference</RootNamespace>
-    <AssemblyName>Gramma.Inference</AssemblyName>
+    <RootNamespace>Grammophone.EnnounInference</RootNamespace>
+    <AssemblyName>Grammophone.EnnounInference</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -22,7 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\Gramma.Inference.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\Grammophone.EnnounInference.XML</DocumentationFile>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\Gramma.Inference.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\Grammophone.EnnounInference.XML</DocumentationFile>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
@@ -90,61 +90,61 @@
     <Compile Include="Words\WordFormsDictionaryBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Gramma.Caching\Gramma.Caching.csproj">
+    <ProjectReference Include="..\Grammophone.Caching\Grammophone.Caching.csproj">
       <Project>{2C834C5B-AA21-43FA-826E-398AB4DE25AC}</Project>
-      <Name>Gramma.Caching</Name>
+      <Name>Grammophone.Caching</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gramma.Configuration\Gramma.Configuration.csproj">
+    <ProjectReference Include="..\Grammophone.Configuration\Grammophone.Configuration.csproj">
       <Project>{0f7811fd-6162-4813-9c55-6c43e67308b0}</Project>
-      <Name>Gramma.Configuration</Name>
+      <Name>Grammophone.Configuration</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gramma.CRF\Gramma.CRF.csproj">
+    <ProjectReference Include="..\Grammophone.CRF\Grammophone.CRF.csproj">
       <Project>{4959C391-BEA5-4DC4-AE66-4A14D044E2B6}</Project>
-      <Name>Gramma.CRF</Name>
+      <Name>Grammophone.CRF</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gramma.DataStreaming\Gramma.DataStreaming.csproj">
+    <ProjectReference Include="..\Grammophone.DataStreaming\Grammophone.DataStreaming.csproj">
       <Project>{9841e0b6-915b-4ec6-b2ec-43a83e112c91}</Project>
-      <Name>Gramma.DataStreaming</Name>
+      <Name>Grammophone.DataStreaming</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gramma.GenericContentModel\Gramma.GenericContentModel.csproj">
+    <ProjectReference Include="..\Grammophone.GenericContentModel\Grammophone.GenericContentModel.csproj">
       <Project>{79D2D4C7-C8DE-4F11-93ED-AA4E4D2FC974}</Project>
-      <Name>Gramma.GenericContentModel</Name>
+      <Name>Grammophone.GenericContentModel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gramma.Indexing\Gramma.Indexing.csproj">
+    <ProjectReference Include="..\Grammophone.Indexing\Grammophone.Indexing.csproj">
       <Project>{937A024F-5DC5-4CA6-864E-BF5D9CB2E039}</Project>
-      <Name>Gramma.Indexing</Name>
+      <Name>Grammophone.Indexing</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gramma.Kernels\Gramma.Kernels.csproj">
+    <ProjectReference Include="..\Grammophone.Kernels\Grammophone.Kernels.csproj">
       <Project>{D025D18B-E77C-454C-9D1A-0F6B22A51273}</Project>
-      <Name>Gramma.Kernels</Name>
+      <Name>Grammophone.Kernels</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gramma.LanguageModel\Gramma.LanguageModel.csproj">
+    <ProjectReference Include="..\Grammophone.LanguageModel\Grammophone.LanguageModel.csproj">
       <Project>{5461B4B2-0832-42D5-AE04-6B2A7D4BF4DC}</Project>
-      <Name>Gramma.LanguageModel</Name>
+      <Name>Grammophone.LanguageModel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gramma.Linq\Gramma.Linq.csproj">
+    <ProjectReference Include="..\Grammophone.Linq\Grammophone.Linq.csproj">
       <Project>{E5B5F560-5224-49CC-B807-D13CE452D63B}</Project>
-      <Name>Gramma.Linq</Name>
+      <Name>Grammophone.Linq</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gramma.Optimization\Gramma.Optimization.csproj">
+    <ProjectReference Include="..\Grammophone.Optimization\Grammophone.Optimization.csproj">
       <Project>{A86E4DEA-C3E5-44F9-8975-B15E21F0E03A}</Project>
-      <Name>Gramma.Optimization</Name>
+      <Name>Grammophone.Optimization</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gramma.Parallel\Gramma.Parallel.csproj">
+    <ProjectReference Include="..\Grammophone.Parallel\Grammophone.Parallel.csproj">
       <Project>{7A32CFF6-1268-4CFB-BEE4-3F94DCC83028}</Project>
-      <Name>Gramma.Parallel</Name>
+      <Name>Grammophone.Parallel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gramma.Serialization\Gramma.Serialization.csproj">
+    <ProjectReference Include="..\Grammophone.Serialization\Grammophone.Serialization.csproj">
       <Project>{B0E855CB-8A43-4623-8184-31CD4B4EBB57}</Project>
-      <Name>Gramma.Serialization</Name>
+      <Name>Grammophone.Serialization</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gramma.SVM\Gramma.SVM.csproj">
+    <ProjectReference Include="..\Grammophone.SVM\Grammophone.SVM.csproj">
       <Project>{96703F3E-23D2-4A59-B521-CD69C34B8DD0}</Project>
-      <Name>Gramma.SVM</Name>
+      <Name>Grammophone.SVM</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gramma.Vectors\Gramma.Vectors.csproj">
+    <ProjectReference Include="..\Grammophone.Vectors\Grammophone.Vectors.csproj">
       <Project>{039DA284-52B0-4E55-917E-92F0CD3C5AD9}</Project>
-      <Name>Gramma.Vectors</Name>
+      <Name>Grammophone.Vectors</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

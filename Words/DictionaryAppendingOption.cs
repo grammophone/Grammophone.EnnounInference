@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Gramma.Inference.Words
+namespace Grammophone.EnnounInference.Words
 {
 	/// <summary>
 	/// Describes what additional scores to include in

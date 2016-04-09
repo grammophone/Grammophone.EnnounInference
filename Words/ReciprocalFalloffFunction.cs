@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Gramma.Inference.Words
+namespace Grammophone.EnnounInference.Words
 {
 	/// <summary>
 	/// Returns a falloff function with formula f(editDistance) = 1.0 / (1.0 + λ * editDistance) to be used 

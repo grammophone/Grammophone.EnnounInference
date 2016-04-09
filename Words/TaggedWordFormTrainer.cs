@@ -5,15 +5,15 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using Gramma.Indexing;
-using Gramma.Inference.Configuration;
-using Gramma.LanguageModel;
-using Gramma.LanguageModel.Provision;
-using Gramma.LanguageModel.Provision.EditCommands;
-using Gramma.LanguageModel.TrainingSources;
-using Gramma.Parallel;
+using Grammophone.Indexing;
+using Grammophone.EnnounInference.Configuration;
+using Grammophone.LanguageModel;
+using Grammophone.LanguageModel.Provision;
+using Grammophone.LanguageModel.Provision.EditCommands;
+using Grammophone.LanguageModel.TrainingSources;
+using Grammophone.Parallel;
 
-namespace Gramma.Inference.Words
+namespace Grammophone.EnnounInference.Words
 {
 	/// <summary>
 	/// Provides training services for tagged word forms.

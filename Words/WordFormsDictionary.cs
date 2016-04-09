@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Gramma.Indexing;
-using Gramma.GenericContentModel;
-using Gramma.LanguageModel;
+using Grammophone.Indexing;
+using Grammophone.GenericContentModel;
+using Grammophone.LanguageModel;
 using System.Diagnostics;
 
-namespace Gramma.Inference.Words
+namespace Grammophone.EnnounInference.Words
 {
 	/// <summary>
 	/// A dictionary of untagged word forms, stored as syllables.

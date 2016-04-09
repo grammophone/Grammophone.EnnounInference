@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Gramma.GenericContentModel;
-using Gramma.LanguageModel.Provision;
+using Grammophone.GenericContentModel;
+using Grammophone.LanguageModel.Provision;
 
-namespace Gramma.Inference
+namespace Grammophone.EnnounInference
 {
 	/// <summary>
 	/// Collection of <see cref="InferenceResource"/> items, indexed by <see cref="ReadOnlyLanguageFacet.LanguageProvider"/>.

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Gramma.LanguageModel.Provision.EditCommands;
-using Gramma.GenericContentModel;
+using Grammophone.LanguageModel.Provision.EditCommands;
+using Grammophone.GenericContentModel;
 
-namespace Gramma.Inference.Words
+namespace Grammophone.EnnounInference.Words
 {
 	/// <summary>
 	/// Represents a word's score value for a <see cref="WordFeature"/>.

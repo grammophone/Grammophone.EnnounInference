@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Gramma.LanguageModel.Provision;
-using Gramma.LanguageModel.TrainingSources;
-using Gramma.Inference.Configuration;
+using Grammophone.LanguageModel.Provision;
+using Grammophone.LanguageModel.TrainingSources;
+using Grammophone.EnnounInference.Configuration;
 
-namespace Gramma.Inference
+namespace Grammophone.EnnounInference
 {
 	/// <summary>
 	/// An item associated with an <see cref="InferenceResource"/>.

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 
-namespace Gramma.Inference.Extensions
+namespace Grammophone.EnnounInference.Extensions
 {
 	/// <summary>
 	/// Extensions for <see cref="Task"/>.

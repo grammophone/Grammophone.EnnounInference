@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Gramma.Inference.Sentences
+namespace Grammophone.EnnounInference.Sentences
 {
 	/// <summary>
 	/// Discriminates how a word is scored by a its <see cref="Words.ScoreBank"/>. 

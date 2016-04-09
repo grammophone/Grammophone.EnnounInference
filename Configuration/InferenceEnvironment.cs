@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Xaml;
-using Gramma.LanguageModel;
-using Gramma.LanguageModel.Provision;
-using Gramma.LanguageModel.TrainingSources;
-using Gramma.Inference.Extensions;
+using Grammophone.LanguageModel;
+using Grammophone.LanguageModel.Provision;
+using Grammophone.LanguageModel.TrainingSources;
+using Grammophone.EnnounInference.Extensions;
 using System.Threading.Tasks;
-using Gramma.Configuration;
+using Grammophone.Configuration;
 
-namespace Gramma.Inference.Configuration
+namespace Grammophone.EnnounInference.Configuration
 {
 	/// <summary>
 	/// The inference environment.

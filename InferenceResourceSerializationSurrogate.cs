@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace Gramma.Inference
+namespace Grammophone.EnnounInference
 {
 	/// <summary>
 	/// Serialization surrogate for <see cref="InferenceResource"/>. 

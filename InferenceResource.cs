@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Runtime.Serialization;
 using System.IO;
-using Gramma.GenericContentModel;
-using Gramma.LanguageModel.Provision;
-using Gramma.LanguageModel.Grammar;
-using Gramma.LanguageModel.Grammar.SerializationSurrogates;
+using Grammophone.GenericContentModel;
+using Grammophone.LanguageModel.Provision;
+using Grammophone.LanguageModel.Grammar;
+using Grammophone.LanguageModel.Grammar.SerializationSurrogates;
 
-namespace Gramma.Inference
+namespace Grammophone.EnnounInference
 {
 	/// <summary>
 	/// A complete set of inference services for a language.
@@ -483,7 +483,7 @@ namespace Gramma.Inference
 		{
 			if (languageProvider == null) throw new ArgumentNullException("languageProvider");
 
-			var formatter = new Gramma.Serialization.FastBinaryFormatter();
+			var formatter = new Grammophone.Serialization.FastBinaryFormatter();
 
 			var surrogateSelector = new SurrogateSelector();
 

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Gramma.LanguageModel;
-using Gramma.LanguageModel.Provision;
+using Grammophone.LanguageModel;
+using Grammophone.LanguageModel.Provision;
 
-namespace Gramma.Inference.Configuration
+namespace Grammophone.EnnounInference.Configuration
 {
 	/// <summary>
 	/// Exception for errors in the defined <see cref="Setup"/>.

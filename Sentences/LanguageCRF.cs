@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Gramma.CRF;
-using Gramma.LanguageModel.Grammar;
+using Grammophone.CRF;
+using Grammophone.LanguageModel.Grammar;
 
-namespace Gramma.Inference.Sentences
+namespace Grammophone.EnnounInference.Sentences
 {
 	/// <summary>
 	/// Conditinal random field to be used in <see cref="SentenceClassifier"/>.

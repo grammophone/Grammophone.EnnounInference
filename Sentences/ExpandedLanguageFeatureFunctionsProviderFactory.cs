@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Gramma.LanguageModel.Grammar;
-using Gramma.Inference.Words;
+using Grammophone.LanguageModel.Grammar;
+using Grammophone.EnnounInference.Words;
 
-namespace Gramma.Inference.Sentences
+namespace Grammophone.EnnounInference.Sentences
 {
 	/// <summary>
 	/// This is a specialized <see cref="LanguageFeatureFunctionsProviderFactory"/>

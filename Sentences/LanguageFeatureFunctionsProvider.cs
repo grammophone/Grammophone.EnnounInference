@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Gramma.CRF;
-using Gramma.LanguageModel.Grammar;
-using Gramma.Inference.Words;
-using Gramma.Vectors;
+using Grammophone.CRF;
+using Grammophone.LanguageModel.Grammar;
+using Grammophone.EnnounInference.Words;
+using Grammophone.Vectors;
 using System.Collections.Concurrent;
 
-namespace Gramma.Inference.Sentences
+namespace Grammophone.EnnounInference.Sentences
 {
 	/// <summary>
 	/// Provides the feature functions for use with the <see cref="LanguageCRF"/>

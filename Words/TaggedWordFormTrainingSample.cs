@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Gramma.LanguageModel;
-using Gramma.LanguageModel.Provision.EditCommands;
+using Grammophone.LanguageModel;
+using Grammophone.LanguageModel.Provision.EditCommands;
 
-namespace Gramma.Inference.Words
+namespace Grammophone.EnnounInference.Words
 {
 	/// <summary>
 	/// Training sample for <see cref="WordClassifier"/>.

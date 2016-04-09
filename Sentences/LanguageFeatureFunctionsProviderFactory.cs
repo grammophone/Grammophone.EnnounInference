@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Gramma.Caching;
-using Gramma.CRF;
-using Gramma.Inference.Words;
-using Gramma.LanguageModel.Grammar;
+using Grammophone.Caching;
+using Grammophone.CRF;
+using Grammophone.EnnounInference.Words;
+using Grammophone.LanguageModel.Grammar;
 using System.Runtime.Serialization;
-using Gramma.Vectors;
+using Grammophone.Vectors;
 
-namespace Gramma.Inference.Sentences
+namespace Grammophone.EnnounInference.Sentences
 {
 	/// <summary>
 	/// Provides <see cref="LanguageFeatureFunctionsProvider"/> instances

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Gramma.LanguageModel.Provision;
-using Gramma.LanguageModel.Grammar;
+using Grammophone.LanguageModel.Provision;
+using Grammophone.LanguageModel.Grammar;
 
-namespace Gramma.Inference.Sentences
+namespace Grammophone.EnnounInference.Sentences
 {
 	/// <summary>
 	/// An inferred tag-lemma pair for a word.

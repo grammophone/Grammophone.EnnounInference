@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Gramma.GenericContentModel;
-using Gramma.LanguageModel;
-using Gramma.LanguageModel.Provision;
-using Gramma.Inference.Configuration;
+using Grammophone.GenericContentModel;
+using Grammophone.LanguageModel;
+using Grammophone.LanguageModel.Provision;
+using Grammophone.EnnounInference.Configuration;
 
-namespace Gramma.Inference
+namespace Grammophone.EnnounInference
 {
 	/// <summary>
 	/// Collection of <see cref="InferenceResourceProvider"/> items, 

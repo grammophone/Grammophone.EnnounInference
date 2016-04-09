@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Gramma.LanguageModel.Provision.EditCommands;
+using Grammophone.LanguageModel.Provision.EditCommands;
 
-namespace Gramma.Inference.Words
+namespace Grammophone.EnnounInference.Words
 {
 	/// <summary>
 	/// Holds a <see cref="CommandSequenceClass"/> 
