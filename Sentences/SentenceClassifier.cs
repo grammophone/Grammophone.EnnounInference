@@ -285,8 +285,8 @@ namespace Grammophone.EnnounInference.Sentences
 
 			if (lemmaInferences == null) return new SentenceInference(null, 0.0);
 
-			double probability = 
-				sequenceEvaluator.ComputeLogConditionalLikelihood(lemmaInferences.Select(li => li.Tag).ToArray());
+			double probability = Math.Exp(
+				sequenceEvaluator.ComputeLogConditionalLikelihood(lemmaInferences.Select(li => li.Tag).ToArray()));
 
 			return new SentenceInference(new ReadOnlySequence<LemmaInference>(lemmaInferences), probability);
 		}
