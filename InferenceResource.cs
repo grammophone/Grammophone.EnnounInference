@@ -172,6 +172,41 @@ namespace Grammophone.EnnounInference
 			#endregion
 		}
 
+		/// <summary>
+		/// A serialization binder which handles renamed assemblies and types.
+		/// </summary>
+		internal class RenamingSerializationBinder : Serialization.DefaultSerializationBinder
+		{
+			public Tuple<string, string>[] AssemblyRenames { get; set; }
+
+			public Tuple<string, string>[] TypeRenames { get; set; }
+
+			public override Type BindToType(string assemblyName, string typeName)
+			{
+				if (this.AssemblyRenames != null)
+				{
+					for (int i = 0; i < this.AssemblyRenames.Length; i++)
+					{
+						var tuple = this.AssemblyRenames[i];
+
+						assemblyName = assemblyName.Replace(tuple.Item1, tuple.Item2);
+					}
+				}
+
+				if (this.TypeRenames != null)
+				{
+					for (int i = 0; i < this.TypeRenames.Length; i++)
+					{
+						var tuple = this.TypeRenames[i];
+
+						typeName = typeName.Replace(tuple.Item1, tuple.Item2);
+					}
+				}
+
+				return base.BindToType(assemblyName, typeName);
+			}
+		}
+
 		#endregion
 
 		#region Private fields
@@ -484,6 +519,22 @@ namespace Grammophone.EnnounInference
 			if (languageProvider == null) throw new ArgumentNullException("languageProvider");
 
 			var formatter = new Grammophone.Serialization.FastBinaryFormatter();
+
+			var serializationBinder = new RenamingSerializationBinder
+			{
+				AssemblyRenames = new Tuple<string, string>[] 
+				{
+					new Tuple<string, string>("Gramma.Inference", "Grammophone.EnnounInference"),
+					new Tuple<string, string>("Gramma.", "Grammophone.")
+				},
+				TypeRenames = new Tuple<string, string>[]
+				{
+					new Tuple<string, string>("Gramma.Inference", "Grammophone.EnnounInference"),
+					new Tuple<string, string>("Gramma.", "Grammophone.")
+				}
+			};
+
+			formatter.Binder = serializationBinder;
 
 			var surrogateSelector = new SurrogateSelector();
 

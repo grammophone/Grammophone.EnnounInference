@@ -161,6 +161,32 @@ namespace Grammophone.EnnounInference.Configuration
 		}
 
 		/// <summary>
+		/// Load an <see cref="InferenceResource"/> from the <see cref="InferenceResourceProvider"/> specified by a
+		/// given <see cref="LanguageProvider"/>
+		/// and register it under <see cref="InferenceEnvironment.InferenceResources"/>,
+		/// replacing the preexisting item if it exists for the same <see cref="LanguageProvider"/>.
+		/// </summary>
+		/// <param name="languageProvider">The <see cref="LanguageProvider"/> to be associated with the loaded <see cref="InferenceResource"/>.</param>
+		/// <returns>
+		/// Returns the <see cref="InferenceResource"/> loaded or null
+		/// if the <see cref="InferenceResourceProvider"/> for the <paramref name="languageProvider"/>
+		/// does not exist.
+		/// </returns>
+		public static InferenceResource LoadInferenceResource(LanguageProvider languageProvider)
+		{
+			if (languageProvider == null) throw new ArgumentNullException(nameof(languageProvider));
+
+			if (!Setup.InferenceResourceProviders.ContainsKey(languageProvider))
+				return null;
+
+			var provider = Setup.InferenceResourceProviders[languageProvider];
+
+			string filename = provider.Path;
+
+			return LoadInferenceResource(languageProvider, filename);
+		}
+
+		/// <summary>
 		/// Load an <see cref="InferenceResource"/> from file and register it under <see cref="InferenceEnvironment.InferenceResources"/>,
 		/// replacing preexisting item if it exists for the same <see cref="LanguageProvider"/>.
 		/// </summary>
