@@ -288,8 +288,9 @@ namespace Grammophone.EnnounInference.Sentences
 				return new SentenceInference(new ReadOnlySequence<LemmaInference>(words.Select(w => new LemmaInference(w, null, null))), 0.0);
 			}
 
-			double probability = Math.Exp(
-				sequenceEvaluator.ComputeLogConditionalLikelihood(lemmaInferences.Select(li => li.Tag).ToArray()));
+			double probability = 0.7; // TODO: Remeove this mock once the problem with probabilities has been resolved.
+				//Math.Exp(
+				//sequenceEvaluator.ComputeLogConditionalLikelihood(lemmaInferences.Select(li => li.Tag).ToArray()));
 
 			return new SentenceInference(new ReadOnlySequence<LemmaInference>(lemmaInferences), probability);
 		}
