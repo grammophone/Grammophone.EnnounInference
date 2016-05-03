@@ -283,7 +283,10 @@ namespace Grammophone.EnnounInference.Sentences
 
 			this.InferLemmata(words, out sequenceEvaluator, out lemmaInferences);
 
-			if (lemmaInferences == null) return new SentenceInference(null, 0.0);
+			if (lemmaInferences == null)
+			{
+				return new SentenceInference(new ReadOnlySequence<LemmaInference>(words.Select(w => new LemmaInference(w, null, null))), 0.0);
+			}
 
 			double probability = Math.Exp(
 				sequenceEvaluator.ComputeLogConditionalLikelihood(lemmaInferences.Select(li => li.Tag).ToArray()));

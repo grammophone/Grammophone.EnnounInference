@@ -31,16 +31,16 @@ namespace Grammophone.EnnounInference.Sentences
 		/// The word's form.
 		/// </param>
 		/// <param name="tag">
-		/// The inferred tag of the word.
+		/// The inferred tag of the word, or null if tag inference was impossible.
 		/// </param>
 		/// <param name="lemma">
-		/// The inferrred lemma of the word. Might be normalized (for example, capitalized or missing accents), depending on <see cref="LanguageProvider"/>.
+		/// The inferrred lemma of the word, or null if lemma inference was impossible.
+		/// Might be normalized (for example, capitalized or missing accents), 
+		/// depending on <see cref="LanguageProvider"/>.
 		/// </param>
 		public LemmaInference(string form, Tag tag, string lemma)
 		{
 			if (form == null) throw new ArgumentNullException("form");
-			if (tag == null) throw new ArgumentNullException("tag");
-			if (lemma == null) throw new ArgumentNullException("lemma");
 
 			this.form = form;
 			this.tag = tag;
@@ -60,7 +60,7 @@ namespace Grammophone.EnnounInference.Sentences
 		}
 
 		/// <summary>
-		/// The inferred tag of the word.
+		/// The inferred tag of the word, or null if tag inference was impossible.
 		/// </summary>
 		public Tag Tag
 		{ 
@@ -68,7 +68,8 @@ namespace Grammophone.EnnounInference.Sentences
 		}
 
 		/// <summary>
-		/// The inferrred lemma of the word. Might be normalized (for example, capitalized or missing accents), 
+		/// The inferrred lemma of the word, or null if lemma inference was impossible.
+		/// Might be normalized (for example, capitalized or missing accents), 
 		/// depending on <see cref="LanguageProvider"/>.
 		/// </summary>
 		public string Lemma 
