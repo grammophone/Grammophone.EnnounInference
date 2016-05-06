@@ -31,6 +31,12 @@ namespace Grammophone.EnnounInference.Configuration
 		#region Public properties
 
 		/// <summary>
+		/// Enable reading serialized objects having 'Gramma' as root namespace instead of 'Grammophone'.
+		/// DEfault is false.
+		/// </summary>
+		public bool EnableReadingOldNamespaces { get; set; }
+
+		/// <summary>
 		/// The available language providers, indexed by <see cref="LanguageProvider.LanguageKey"/>.
 		/// </summary>
 		public LanguageProviders LanguageProviders { get; private set; }

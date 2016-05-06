@@ -520,21 +520,24 @@ namespace Grammophone.EnnounInference
 
 			var formatter = new Grammophone.Serialization.FastBinaryFormatter();
 
-			var serializationBinder = new RenamingSerializationBinder
+			if (Configuration.InferenceEnvironment.Setup.EnableReadingOldNamespaces)
 			{
-				AssemblyRenames = new Tuple<string, string>[] 
+				var serializationBinder = new RenamingSerializationBinder
 				{
+					AssemblyRenames = new Tuple<string, string>[]
+					{
 					new Tuple<string, string>("Gramma.Inference", "Grammophone.EnnounInference"),
 					new Tuple<string, string>("Gramma.", "Grammophone.")
-				},
-				TypeRenames = new Tuple<string, string>[]
-				{
+					},
+					TypeRenames = new Tuple<string, string>[]
+					{
 					new Tuple<string, string>("Gramma.Inference", "Grammophone.EnnounInference"),
 					new Tuple<string, string>("Gramma.", "Grammophone.")
-				}
-			};
+					}
+				};
 
-			formatter.Binder = serializationBinder;
+				formatter.Binder = serializationBinder;
+			}
 
 			var surrogateSelector = new SurrogateSelector();
 
