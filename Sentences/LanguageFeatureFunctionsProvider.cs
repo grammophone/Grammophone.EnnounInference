@@ -61,14 +61,13 @@ namespace Grammophone.EnnounInference.Sentences
 			{
 				case EvaluationScope.Running:
 					{
-						var inputPartitioner = Partitioner.Create(0, input.Length, 1);
-
-						System.Threading.Tasks.Parallel.ForEach(inputPartitioner, range =>
+						System.Threading.Tasks.Parallel.For(
+							0, 
+							input.Length, 
+							new System.Threading.Tasks.ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount }, 
+							i =>
 							{
-								for (int i = range.Item1; i < range.Item2; i++)
-								{
-									this.ScoreBanks[i] = factory.BanksCache.Get(input[i]);
-								}
+								this.ScoreBanks[i] = factory.BanksCache.Get(input[i]);
 							});
 					}
 					break;
